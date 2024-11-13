@@ -28,6 +28,9 @@ dependencies {
 	// spring boot web
 	implementation("org.springframework.boot:spring-boot-starter-web")
 
+	// swagger
+	implementation ("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0")
+
 	// lombok
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")

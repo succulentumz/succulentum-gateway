@@ -24,17 +24,36 @@ repositories {
 	mavenCentral()
 }
 
+
 dependencies {
 	// spring boot web
 	implementation("org.springframework.boot:spring-boot-starter-web")
+
 
 	// lombok
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
 
-	//test
+	// gateway
+	implementation("org.springframework.cloud:spring-cloud-starter-gateway-mvc")
+
+	// security
+	implementation("org.springframework.boot:spring-boot-starter-security")
+	implementation("org.springframework.security:spring-security-oauth2-resource-server")
+	implementation("org.springframework.security:spring-security-oauth2-jose")
+
+	// test
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+}
+
+extra["springCloudVersion"] = "2023.0.3"
+
+
+dependencyManagement {
+	imports {
+		mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
+	}
 }
 
 tasks.withType<Test> {

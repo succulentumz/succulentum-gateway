@@ -11,5 +11,5 @@ import org.springframework.context.annotation.Configuration;
 @Setter
 public class ServicesUrlConfig {
     private String collectionServiceUrl;
-    private String usersServiceUrl;
+    private String profileServiceUrl;
 }

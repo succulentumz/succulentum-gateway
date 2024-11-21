@@ -17,7 +17,7 @@ app:
 
 services:
   collectionServiceUrl: "http://localhost:8080"
-  usersServiceUrl: "http://localhost:6700"
+  profileServiceUrl: "http://localhost:6700"
 
 logging:
   level:

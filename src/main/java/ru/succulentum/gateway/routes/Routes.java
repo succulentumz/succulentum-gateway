@@ -26,10 +26,10 @@ public class Routes {
 
     @Bean
     public RouterFunction<ServerResponse> usersServiceRoute() {
-        return GatewayRouterFunctions.route("users_service")
+        return GatewayRouterFunctions.route("profile_service")
                 .route(
                         RequestPredicates.path("/api/users/**"),
-                        HandlerFunctions.http(servicesUrlConfig.getUsersServiceUrl()))
+                        HandlerFunctions.http(servicesUrlConfig.getProfileServiceUrl()))
                 .build();
     }
 }
